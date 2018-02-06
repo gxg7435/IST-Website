@@ -1,0 +1,142 @@
+#about {
+	background-Color: white;
+	border-color: #C1E0FF; 
+    border-width:1px; 
+    border-style:solid;
+	padding:10px;
+}
+
+#tog{
+	
+	margin:50px;
+}
+  .ui-resizable-se {
+    bottom: 17px;
+  }
+
+  #employmentDetails {
+	margin-top:300px;	
+}
+
+#subtitleEmploy1 {
+	margin-top:50px;
+	margin-bottom:50px;
+}
+
+#subtitleEmploy2 {
+	position:relative;
+	margin-top:300px;
+	margin-bottom:50px;
+}
+
+#myform {
+	border-radius: 5px;
+	background-color: white;
+	padding: 20px;
+	margin:150px 50px;
+	width:30%;
+	height:600px;
+}
+
+
+input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+     
+}
+
+#button2 {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position:relative;
+    
+}
+#button2:hover {
+    background-color: #45a049;
+}
+#title{
+	font-size:30px;
+	text-align:center;
+}
+
+#dscrp {
+	
+	padding:10px;
+	
+}
+#quote{
+	padding:20px;
+}
+
+#Author{
+	Color:red;
+	text-align:center;
+	
+}
+
+#deptInfo{
+	color:white;
+	position:relative;
+	padding-top:100px;
+	margin-left:330px;
+}
+
+.content {
+    /* The image used */
+    position:relative;
+	margin-top:100px;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("bg2.jpg");
+	
+    /* Set a specific height */
+    height: 10000px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#tabs {
+	
+	background-Color:white;
+	width:100%;
+	margin:100px 0px 0px 0px;
+	padding:20px;
+}
+
+#undergradMinors {
+	margin:300px 30px 0px 30px;
+	
+}
+
+#undergradMinorTitle{
+	color:orange;
+	font-size:4em;
+	font-family:arial;
+	text-align:center;
+	margin-bottom:50px;
+}
+
+#employmentTitle{
+	color:orange;
+	font-size:4em;
+	font-family:arial;
+	text-align:center;
+	
+}

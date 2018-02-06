@@ -1,0 +1,361 @@
+<html>
+
+<head>
+
+<script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="getData.js"></script>
+
+<link rel="stylesheet" type="text/css" href="display.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<style>
+  
+  .ui-tooltip, .arrow:after {
+    background: black;
+    border: 2px solid white;
+  }
+  
+  .ui-tooltip {
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    font: bold 14px "Helvetica Neue", Sans-Serif;
+    text-transform: uppercase;
+    box-shadow: 0 0 7px black;
+  }
+  
+  .arrow {
+    width: 70px;
+    height: 50px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+  }
+  
+  .arrow.top {
+    top: -16px;
+    bottom: auto;
+  }
+  
+  .arrow.left {
+    left: 20%;
+  }
+  
+  .arrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 6px 5px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .arrow.top:after {
+    bottom: -20px;
+    top: auto;
+  }
+</style>   
+
+<style>
+  #feedback { font-size: 1.4em; }
+  #selectable .ui-selecting { background: #FECA40; }
+  #selectable .ui-selected { background: #F39814; color: white; }
+  #selectable { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+  #selectable li { margin: 3px; padding: 50px 20px 20px 20px; float: left; width: 300px; height: 200px; font-size: 1em; text-align: center; }
+  
+  #employmentTitle{
+	color:orange;
+	font-size:4em;
+	font-family:arial;
+	position:relative;
+	margin:700px 0px 50px 100px;
+}
+
+	#undergradMinors {
+	position:relative;
+	margin-bottom:100px;
+}
+</style>
+
+    <style>
+  .ui-tabs-vertical { width: 90em;margin:300px 0 0 0;width:100%;height:350px; padding:5px; }
+  .ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 25em;margin:30px; }
+  .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%;height:40px;padding:10px; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+  .ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+  .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; }
+  .ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;margin-right:250px;margin-top:30px;}
+  
+  #Undergrad{
+	margin-left:350px;
+	font-size:40px;
+   }
+   
+   #grad{
+	margin-left:350px;
+	font-size:40px;
+   }
+   #lastEle {
+   margin-bottom:250px;
+   }
+	table {
+    border-collapse: collapse;
+}
+
+	table, th, td {
+    border: 1px solid black;
+	padding:10px;
+}
+</style>
+<style>
+  #feedback { font-size: 1.4em; }
+  #selectable2 .ui-selecting { background: #FECA40; }
+  #selectable2 .ui-selected { background: #F39814; color: white; }
+  #selectable2 { list-style-type: none; margin-bottom: 100px; padding: 0; width: 100%; }
+  #selectable2 li {  margin:50px 10px 100px 30px;padding:100px 10px 10px 10px;float: left; width: 600px; height: 300px; font-size: 2em; text-align: center; }
+</style>
+
+<style>
+  #feedback { font-size: 1.4em; }
+  #selectable3 .ui-selecting { background: #FECA40; }
+  #selectable3 .ui-selected { background: #F39814; color: white; }
+  #selectable3 { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+  #selectable3 li { margin: 10px; padding: 50px 20px 20px 30px; float: left; width: 300px; height: 200px; font-size: 1em; text-align: center;color:white }
+ 
+</style>
+ 
+</head>
+
+<body>
+<div id="mainDiv" class="parallax">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      
+	  <a class="navbar-brand" href="https://www.rit.edu/" float="left">Rochester Institute of technology</a>
+	  <a class="navbar-brand" href="#mainDiv" float="left">Home</a>
+	  
+	  <a class="navbar-brand" href="#undergradMove" float="left">Degrees</a>
+	  <a class="navbar-brand" href="#undergradMinors" float="left">Minors</a>
+	  
+	  <a class="navbar-brand" href="#employMove" float="left">Careers</a>
+	  <a class="navbar-brand" href="#employmentDetails" float="left">Employment</a>
+	  <a class="navbar-brand" href="#myform" float="left">Queries</a>
+    
+	</div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+<div id="deptInfo" style="color:white;font-size:50px;">
+<span id="colchange" style="color:orange">INFORMATION </span>SCIENCE AND<br> TECHNOLOGIES @ RIT
+</div>
+
+<div id="dialog" style="display:none;">
+<table id="location">
+
+<tr id="row">
+<th>No</th>
+<th>Employer</span></th>
+<th>Degree</th>
+<th >Location</th>
+</tr>
+
+</table>
+</div>
+
+<div id="dialog2" style="display:none;">
+<table id="location2" >
+
+<tr>
+<th>No</th>
+<th>Employer</th>
+<th>Degree</th>
+<th>Location</th>
+<th>Title</th>
+<th>Start Date</th>
+</tr>
+
+</table>
+</div>
+
+<div id="minorContent1" style="display:none">
+</div>
+<div id="about" style="margin:300px 100px 0px 150px;z-index:0">
+</div>
+
+<div class="tabs" >
+<div id="undergradMove">
+<p id="Undergrad">Our Undergraduate Degrees</p>
+  <ul>
+    <li id="list1"><a href="#tabs-1" title="Click on left end"></a></li>
+    <li id="list2"><a href="#tabs-2"></a></li>
+    <li id="list3"><a href="#tabs-3"></a></li>
+  </ul>
+  <div id="tabs-1">
+    
+	<p id="descrp1"></p>
+	<ul id="conc1"></ul>
+	</div>
+  <div id="tabs-2">
+    
+    <p id="descrp2"></p>
+	<ul id="conc2"></ul>
+	</div>
+  <div id="tabs-3">
+    
+    <p id="descrp3"></p>
+	<ul id="conc3"></ul>
+	</div>
+	</div>
+</div>
+
+
+<div class="tabs" style="z-index:0">
+<p id="grad">Our graduate Degrees</p>
+  <ul>
+    <li id="gradlist1"><a href="#tabs1-1"></a></li>
+    <li id="gradlist2"><a href="#tabs1-2"></a></li>
+    <li id="gradlist3"><a href="#tabs1-3"></a></li>
+	
+  </ul>
+  <div id="tabs1-1">
+    
+	<p id="graddescrp1"></p>
+	<ul id="gradconc1"></ul>
+	</div>
+  <div id="tabs1-2">
+    
+    <p id="graddescrp2"></p>
+	<ul id="gradconc2"></ul>
+	</div>
+  <div id="tabs1-3">
+    
+    <p id="graddescrp3"></p>
+	<ul id="gradconc3"></ul>
+	</div>
+	
+</div>
+
+<div id="undergradMinors">
+<p id="undergradMinorTitle">UnderGraduate Minors</p>
+
+<ol id="selectable">
+  <li id="listEle" class="ui-state-default" style="border:1px solid black"></li>
+  <li class="ui-state-default" style="border:1px solid black"></li>
+
+  <li class="ui-state-default" style="border:1px solid black"></li>
+  <li class="ui-state-default" style="border:1px solid black"></li>
+
+  <li class="ui-state-default" style="border:1px solid black"></li>
+  <li class="ui-state-default" style="border:1px solid black"></li>
+
+  <li class="ui-state-default" style="border:1px solid black"></li>
+  <li class="ui-state-default" style="border:0px solid black"></li>
+
+</ol>
+</div>
+
+<div id="employMove">
+<p id="employmentTitle">Employment Information</p>
+<ol id="selectable2"style="z-index:0">
+
+<li id="coop" class="ui-state-default">Co-op Table</li>
+<li id="professional" class="ui-state-default">Professional Employment Table</li>
+
+</ol>
+</div>
+
+<div id="studentsMap">
+<p style="margin:40px;font-size:50px;color:white">To see where our students work(MAP) <a href="map.html">Click here</a></p>
+</div>
+
+<div id="employmentDetails">
+
+<p id="titleEmploy" style="color:orange;font-size:40px;margin-left:250px;"></p>
+<p id="subtitleEmploy1" style="color:white;font-size:40px;margin-left:500px;"></p>
+<p id="subdescrEmploy1" style="color:white;font-size:20px;margin-left:15px;margin-right:15px;"></p>
+
+<ol id="selectable3">
+  
+  <li id="listEle1" class="ui-state-default" style="border:1px solid black;background:#f4425f"><p class="ui-descr1"></p><p class="ui-descr2"></p></li>
+  <li class="ui-state-default" style="border:1px solid black;background:#41138c"><p class="ui-descr1"></p><p class="ui-descr2"></p></li>
+
+  <li class="ui-state-default" style="border:1px solid black;background:#1eccc6"><p class="ui-descr1"></p><p class="ui-descr2"></p></li>
+  <li class="ui-state-default" style="border:1px solid black;background:#ea6a09"><p class="ui-descr1"></p><p class="ui-descr2"></p></li>
+
+</ol>
+
+<p id="subtitleEmploy2" style="color:white;font-size:40px;margin-left:500px;"></p>
+<p id="subdescrEmploy2" style="color:white;font-size:20px;margin-left:15px;margin-right:15px;"></p>
+
+<p id="subtitleEmploy3" style="color:white;font-size:40px;margin-left:500px;"></p>
+<p id="subdescrEmploy3" style="color:white;font-size:20px;margin-left:15px;margin-right:15px;"></p>
+
+<p id="subtitleEmploy4" style="color:white;font-size:40px;margin-left:500px;"></p>
+<p id="subdescrEmploy4" style="color:white;font-size:20px;margin-left:15px;margin-right:15px;"></p>
+
+</div>
+<button id="tog">Show/hide Feedback form</button><br><br>
+
+<div id="myform" >
+	<p style="font-size:20px;color:orange">FeedBack Form</p>
+	<form id="subform">
+	
+	<label for="fname" style="color:black">First Name</label>
+	<input type="text" id="fname" name="firstname" title="Enter your First Name Here...">
+		
+	<label for="lname" style="color:black">Last Name</label>
+	<input type="text" id="lname" name="lastname" title="Enter your Last Name Here..."> 
+		
+	<label for="resizable" style="color:black">Question:</label>
+	<textarea id="resizable" rows="5" cols="20" ></textarea>
+		
+	<label for="datepicker" style="color:black">Date:</label>
+	<input type="text" id="datepicker" title="Please enter date here">
+	<button type='button' id="button2" >Submit</button>
+		
+	</form>
+	</div>
+
+</div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzm_8-5qPUmHUI_jyIDwA2U8qjOUlXw9k"></script>
+  
+</body>
+</html>
+
+
